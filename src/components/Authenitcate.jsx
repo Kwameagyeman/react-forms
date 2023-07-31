@@ -7,12 +7,12 @@ const Authenticate = ({ token }) => {
   async function handleClick() {
     try {
       const response = await fetch(
-        "https://fsa-jwt-practice.herokuapp.com/signup",
+        "https://fsa-jwt-practice.herokuapp.com/authenticate",
         {
-          method: "POST",
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
-            Authoriztion: `Bearer ${token}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
